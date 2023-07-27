@@ -31,13 +31,28 @@ type News struct {
 }
 
 func main(){
-  readGoogleTrends
+  var r RSS
+  data := readGoogleTrends()
 }
 
-func readGoogleTrends(){
-  getGoogleTrends
+func getGoogleTrends() *http.Response {
+  resp, err := http.Get("https://trends.google.com/trends/trendingsearches/daily/rss?geo=US")
+
+  if err != nil {
+    fmt.Println(err)
+    os.Exit(1)
+  }
+  return resp
 }
 
-func getGoogleTrends(){
+func readGoogleTrends() []byte {
+  resp := getGoogleTrends()
+  data, err := ioutil.ReadAll(resp.Body)
 
+  if err != nil {
+    fmt.Println(err)
+    os.Exit(1)
+  }
+  return data
 }
+
