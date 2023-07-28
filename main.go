@@ -33,6 +33,13 @@ type News struct {
 func main(){
   var r RSS
   data := readGoogleTrends()
+
+  err := xml.Unmarshal(data, &r)
+  
+  if err != nil {
+    fmt.Println(err)
+    os.Exit(1)
+  }
 }
 
 func getGoogleTrends() *http.Response {
