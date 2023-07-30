@@ -47,7 +47,9 @@ func main(){
       rank := (i + 1)
   }
   fmt.Println("#", rank)
-  fmt.Println("Search Term:")
+  fmt.Println("Search Term:", r.Channel.ItemList[i].Title)
+  fmt.Println("Link to the Trend:", r.Channel.ItemList[i].Link)
+  fmt.Println("Headline:", r.Channel.ItemList[i].NewsItems[0].Headline)
 }
 
 func getGoogleTrends() *http.Response {
