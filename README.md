@@ -19,9 +19,9 @@ Trends is designed to facilitate equity market research by efficiently organizin
 ---
 
 ## Features
-Stage 1 (current):
+Stage 1 (*under construction*):
 - Efficient data processing: Trends can handle and process large datasets with ease, allowing for quick analysis and generating reports.
-Future features:
+### Future features:
 - Interactive CLI: The Command-Line Interface (CLI) offers a straightforward and interactive way to access and explore the data.
 - Data visualization: Trends can generate graphs and charts to help users visualize market trends and stock performance.
 - Extensible architecture: The codebase is structured to encourage easy extension and customization for specific research requirements.
